@@ -1,6 +1,6 @@
 # Visualisation-perception-2D-3D
 
-### Several tools for visualizing 3D perception result
+Several tools for visualizing 3D perception result
 
 ## Contents
 
@@ -11,6 +11,10 @@ pip3 install -r requirement
 ```
 
 ## Visualisation for kitti dataset
+
+Ref: [Explain kitti: sensors, calib, etc](`show_lidar_topview_with_boxes()`)
+
+Run:
 
 ```bash
 cd visualize_kitti
