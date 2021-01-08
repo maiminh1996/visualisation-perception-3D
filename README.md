@@ -17,19 +17,12 @@ cd visualize_kitti
 python visua.py
 ```
 
-- Let uncomment `draw_lidar_simple()` in `visualize_kitti/visua.py`  
-![](imgs/lidar_all.png)
+Let uncomment these functions in `visualize_kitti/visua.py`  
 
-- Let uncomment `show_lidar_with_boxes()` in `visualize_kitti/visua.py` 
-![](imgs/lidar_with_box.png)
-
-- Let uncomment `show_image_with_boxes()` in `visualize_kitti/visua.py` 
-![](imgs/image_with_box_3d.png)
-![](imgs/image_with_box_2d.png)
-
-- Let uncomment `show_lidar_on_image()` in `visualize_kitti/visua.py` 
-![](imgs/lidar_range_view.png)
-![](imgs/lidar_projection_image.png)
-
-- Let uncomment `show_lidar_topview_with_boxes()` in `visualize_kitti/visua.py` 
-![](imgs/lidar_topview.png)
+| `draw_lidar_simple()` | `show_lidar_with_boxes()` |
+| :--: | :--: | 
+| ![](imgs/lidar_all.png) | ![](imgs/lidar_with_box.png) |
+| `show_image_with_boxes()` | `show_lidar_on_image()` | 
+| ![](imgs/image_with_box_3d.png) <br/> ![](imgs/image_with_box_2d.png) | ![](imgs/lidar_range_view.png) <br/> ![](imgs/lidar_projection_image.png) |
+| `show_lidar_topview_with_boxes()` | |
+| ![](imgs/lidar_topview_hori.png) | |
