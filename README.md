@@ -12,7 +12,7 @@ pip3 install -r requirement
 
 ## Visualisation for kitti dataset
 
-Ref: [Explain kitti: sensors, calib, etc](`show_lidar_topview_with_boxes()`)
+Ref: [Explain kitti: sensors, calib, etc](https://maiminh1996.github.io/biblio-self-driving-cars/)
 
 Run:
 
