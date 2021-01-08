@@ -12,7 +12,7 @@ pip3 install -r requirement
 
 ## Visualisation for kitti dataset
 
-Ref: [Explain kitti: sensors, calib, etc](https://maiminh1996.github.io/biblio-self-driving-cars/)
+Ref: [Explain kitti: sensors, calib, etc](https://github.com/maiminh1996/biblio-self-driving-cars/blob/master/dataset/kitti.md)
 
 Run:
 
