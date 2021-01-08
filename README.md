@@ -6,7 +6,10 @@ Several tools for visualizing 3D perception result
 
 - [Visualisation for kitti dataset](#visualisation-for-kitti-dataset)
 
+## Get started
+
 ```bash
+git clone https://github.com/maiminh1996/Visualisation-perception-3D.git
 pip3 install -r requirement
 ```
 
