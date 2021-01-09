@@ -9,8 +9,7 @@ if "mlab" not in sys.modules:
 from utils import kitti_object
 from utils import show_image_with_boxes, show_lidar_with_boxes
 from utils import show_lidar_on_image, show_lidar_topview_with_boxes
-
-from  utils import draw_lidar_simple, draw_lidar
+from utils import draw_lidar_simple, draw_lidar
 
 def main(path, data_idx):
     """
