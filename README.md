@@ -8,6 +8,17 @@ Several tools for visualizing 3D perception result
 
 ## Get started
 
+Dependencies
+
+- Ubuntu 16.04
+- python 3.6 (pip, mkvirtualenv)
+- mayavi 4.7.1
+- opencv 4.2
+- numpy
+- scipy
+
+Or run:
+
 ```bash
 git clone https://github.com/maiminh1996/visualisation-perception-3D.git
 cd visualisation-perception-3D/
