@@ -10,7 +10,7 @@ Several tools for visualizing 3D perception result
 
 ```bash
 git clone https://github.com/maiminh1996/visualisation-perception-3D.git
-cd visualisation-perception-3D
+cd visualisation-perception-3D/
 pip3 install -r requirement.txt
 ```
 
