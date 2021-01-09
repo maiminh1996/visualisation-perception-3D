@@ -1,24 +1,17 @@
-#!/usr/bin/env python3
 import os, sys
 
 import cv2
 import numpy as np
 
-np.random.seed(0)
-
 MY_DIRNAME = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(MY_DIRNAME, '..'))
+# sys.path.insert(0, os.path.join(MY_DIRNAME, '..'))
 sys.path.append(os.path.join(MY_DIRNAME))
-fileDir = os.path.dirname(os.path.abspath(__file__))
-parentDir = os.path.dirname(fileDir)
-
-# MY_DIRNAME = os.path.dirname(os.path.abspath(__file__))  # take the current dir
-# PARENT_DIRNAME = os.path.abspath(os.path.join(MY_DIRNAME, os.pardir))  # take the dir for needed import fold
-# sys.path.insert(0, PARENT_DIRNAME)
 
 import kitti_util as utils
 from iou_3d import box3d_iou as iou3d
 import mayavi.mlab as mlab
+
+np.random.seed(0)
 
 # Create the kitti object class
 class kitti_object(object):
@@ -285,8 +278,6 @@ def show_lidar_with_boxes(
     draw_lidar(pc_velo, fig=fig, pts_color=(0,1,0))
     
     # show_box_lidar(objects, calib, data_idx, fig)
-
-
 
     car_obj = []
     color = (1, 0, 0)

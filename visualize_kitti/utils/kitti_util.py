@@ -4,14 +4,13 @@ import cv2
 import numpy as np
 import sys
 
-MY_DIRNAME = os.path.dirname(os.path.abspath(__file__))
+# MY_DIRNAME = os.path.dirname(os.path.abspath(__file__))
 # sys.path.insert(0, os.path.join(MY_DIRNAME, '..'))
-sys.path.insert(0, MY_DIRNAME)
+# sys.path.append(os.path.join(MY_DIRNAME))
 
 from math_util import *
 
-# np.random.seed(0)
-
+np.random.seed(0)
 
 class Object3d(object):
     """

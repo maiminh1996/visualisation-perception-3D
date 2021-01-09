@@ -1,6 +1,4 @@
-''' Visualization code for point clouds and 3D bounding boxes with mayavi.
-Modified by Charles R. Qi
-Date: September 2017
+'''
 Ref: https://github.com/hengck23/didi-udacity-2017/blob/master/baseline-04/kitti_data/draw.py
 '''
 
@@ -16,10 +14,12 @@ except NameError:
 def draw_lidar_simple(pc, color=None):
     ''' Draw lidar points. simplest set up. '''
     fig = mlab.figure(figure=None, bgcolor=(0, 0, 0), fgcolor=None, engine=None, size=(1600, 1000))
-    if color is None: color = pc[:, 2]
+    if color is None: color = pc[:, 0]
     # draw points
     mlab.points3d(pc[:, 0], pc[:, 1], pc[:, 2], color, color=None, mode='point', colormap='gnuplot', scale_factor=1,
                   figure=fig)
+
+
     # draw origin
     mlab.points3d(0, 0, 0, color=(1, 1, 1), mode='sphere', scale_factor=0.2)
     # draw axis
@@ -32,6 +32,7 @@ def draw_lidar_simple(pc, color=None):
     mlab.plot3d([0, axes[1, 0]], [0, axes[1, 1]], [0, axes[1, 2]], color=(0, 1, 0), tube_radius=None, figure=fig)
     mlab.plot3d([0, axes[2, 0]], [0, axes[2, 1]], [0, axes[2, 2]], color=(0, 0, 1), tube_radius=None, figure=fig)
     mlab.view(azimuth=180, elevation=70, focalpoint=[12.0909996, -1.04700089, -2.03249991], distance=62.0, figure=fig)
+    mlab.show()
     return fig
 
 
@@ -50,11 +51,11 @@ def draw_lidar(pc, color=None, fig=None, bgcolor=(0, 0, 0), pts_scale=1, pts_mod
 
     if fig is None: fig = mlab.figure(figure=None, bgcolor=bgcolor, fgcolor=None, engine=None, size=(1600, 1000))
     if color is None: color = pc[:, 0]
-    nodes = mlab.points3d(pc[:, 0], pc[:, 1], pc[:, 2], mode=pts_mode, colormap='gnuplot',
+    nodes = mlab.points3d(pc[:, 0], pc[:, 1], pc[:, 2], color, color=None, mode=pts_mode, colormap='gnuplot',
                   scale_factor=pts_scale, figure=fig)
-    color = color + min(abs(color))
-    color = color/(max(color))
-    nodes.mlab_source.dataset.point_data.scalars = color
+    # color = color + min(abs(color))
+    # color = color/(max(color))
+    # nodes.mlab_source.dataset.point_data.scalars = color
     # draw origin
     mlab.points3d(0, 0, 0, color=(1, 1, 1), mode='sphere', scale_factor=0.2)
 
@@ -97,7 +98,7 @@ def draw_lidar(pc, color=None, fig=None, bgcolor=(0, 0, 0), pts_scale=1, pts_mod
     # mlab.orientation_axes()
     mlab.view(azimuth=180, elevation=70, focalpoint=[12.0909996, -1.04700089, -2.03249991], distance=62.0, figure=fig)
 
-    mlab.show()
+    # mlab.show()
 
     return fig
 
