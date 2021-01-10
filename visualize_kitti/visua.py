@@ -37,9 +37,9 @@ def main(path, data_idx):
     calib = dataset.get_calibration(data_idx)
     pc_velo = dataset.get_lidar(data_idx)  # (nx4) with 4: x,y,z,r
 
-    draw_lidar_simple(pc_velo[:,0:3])
+    # draw_lidar_simple(pc_velo[:,0:3])
     # draw_lidar(pc_velo) # go to if color is None: color = pc[:, 0] to change color intensity or z
-    # show_lidar_with_boxes(pc_velo[:, 0:3], objects, calib, True, img_width, img_height)
+    show_lidar_with_boxes(pc_velo[:, 0:3], objects, calib, True, img_width, img_height)
     # show_image_with_boxes(img, objects, calib, True)
     # show_lidar_topview_with_boxes(pc_velo, objects, calib)  # TODO recode and understand
     # show_lidar_on_image(pc_velo[:, 0:3], img, calib, img_width, img_height, side='left')
