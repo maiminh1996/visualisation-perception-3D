@@ -14,7 +14,10 @@ Dependencies
 - Ubuntu 16.04
 - python 3.6 (pip, mkvirtualenv)
 - mayavi 4.7.1
-- opencv 4.2
+- Pyside2
+- PyQt5
+- vtk
+- opencv 4.2.0.32
 - numpy
 - scipy
 - open3d 0.7.0.0
