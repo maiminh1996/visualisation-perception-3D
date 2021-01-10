@@ -5,6 +5,7 @@ Several tools for visualizing 3D perception result
 ## Contents
 
 - [Visualisation for kitti dataset](#visualisation-for-kitti-dataset)
+- [Inverse projection RGBD](#inverse-projection-rgbd)
 
 ## Get started
 
@@ -16,6 +17,7 @@ Dependencies
 - opencv 4.2
 - numpy
 - scipy
+- open3d 0.7.0.0
 
 Or run:
 
@@ -32,7 +34,7 @@ Ref: [Explain kitti: sensors, calib, etc](https://github.com/maiminh1996/biblio-
 Run:
 
 ```bash
-cd visualize_kitti
+cd visualize_kitti/
 python visua.py
 ```
 
@@ -45,3 +47,26 @@ Let uncomment these functions in `visualize_kitti/visua.py`
 | ![](imgs/image_with_box_3d.png) <br/> ![](imgs/image_with_box_2d.png) | ![](imgs/lidar_range_view.png) <br/> ![](imgs/lidar_projection_image.png) |
 | `show_lidar_topview_with_boxes()` | |
 | ![](imgs/lidar_topview_hori.png) | |
+
+
+## Inverse projection RGBD
+
+Ref: [Explain inverse projection](https://github.com/darylclimb/cvml_project/tree/master/projections/inverse_projection)
+
+Run:
+
+```bash
+# 2011_09_28_drive_0106_sync
+cd inverse_projection_open3d/
+python inverse_projection.py
+```
+
+![](imgs/2011_09_28_0106.gif)
+
+Run:
+
+```bash
+python visua_pcl.py
+```
+
+![](imgs/2011_09_28_0106_velodyne.gif)
