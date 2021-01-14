@@ -11,6 +11,9 @@ from utils import show_image_with_boxes, show_lidar_with_boxes
 from utils import show_lidar_on_image, show_lidar_topview_with_boxes
 from utils import draw_lidar_simple, draw_lidar
 
+from qt import App
+from PyQt5.QtWidgets import QApplication
+
 print(sys.path)
 
 def main(path, data_idx):
@@ -39,10 +42,10 @@ def main(path, data_idx):
 
     # draw_lidar_simple(pc_velo[:,0:3])
     # draw_lidar(pc_velo) # go to if color is None: color = pc[:, 0] to change color intensity or z
-    show_lidar_with_boxes(pc_velo[:, 0:3], objects, calib, True, img_width, img_height)
+    # show_lidar_with_boxes(pc_velo[:, 0:3], objects, calib, True, img_width, img_height)
     # show_image_with_boxes(img, objects, calib, True)
     # show_lidar_topview_with_boxes(pc_velo, objects, calib)  # TODO recode and understand
-    # show_lidar_on_image(pc_velo[:, 0:3], img, calib, img_width, img_height, side='left')
+    show_lidar_on_image(pc_velo[:, 0:3], img, calib, img_width, img_height, side='left')
 
 if __name__ == '__main__':
     dataset_path = "../dataset/kitti"
